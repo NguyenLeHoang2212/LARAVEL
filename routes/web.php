@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,23 +27,56 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('test',function(){
-    return view('test');
+
+
+Route::get('blog-category',function(){
+    return view('client.pages.blog.blog-category');
 });
-Route::get('test2',function(){
-    return view('test2');
+Route::get('blog-item',function(){
+    return view('client.pages.blog.blog-item');
 });
-Route::get('master',function(){
-    return view('client.layout.master');
+Route::get('facility',function(){
+    return view('client.pages.facility');
 });
-Route::get('cart',function(){
-    return view('client.pages.cart');
+Route::get('contact',function(){
+    return view('client.pages.contact');
 });
-Route::get('blog',function(){
-    return view('client.pages.blog');
+Route::get('reservation-1',function(){
+    return view('client.pages.booking.step1');
 });
-Route::get('home',function(){
-    return view('client.pages.home');
+Route::get('reservation-2',function(){
+    return view('client.pages.booking.step2');
+});
+Route::get('reservation-3',function(){
+    return view('client.pages.booking.step3');
+});
+Route::get('about',function(){
+    return view('client.pages.room.aboutus');
+});
+Route::get('rooms-category',function(){
+    return view('client.pages.room.roomcategory');
+});
+Route::get('room-overview',function(){
+    return view('client.pages.room.roomoverview');
+});
+Route::get('404',function(){
+    return view('client.pages.room.404notfound');
+});
+Route::get('shortcodes',function(){
+    return view('client.pages.room.shortcodes');
+});
+
+Route::get('bookingintro',function(){
+    return view('client.pages.home.home-bookingintro');
+});
+Route::get('bookingbox',function(){
+    return view('client.pages.home.home-bookingbox');
+});
+Route::get('roomsintro',function(){
+    return view('client.pages.home.home-roomsintro');
+});
+Route::get('/',function(){
+    return view('client.pages.home.home-bookingintro');
 });
 Route::get('admin/product',function(){
     return view('admin.pages.product.list');
