@@ -4,7 +4,7 @@
 
     <!-- ========================  Page header ======================== -->
 
-    <div class="page-header" style="background-image:url(assets/images/header-1.jpg)">
+    <div class="page-header" style="background-image:url({{ asset('assets/client/images/header-1.jpg') }})">
         <div class="container">
             <h2 class="title">Rooms & Suites</h2>
             <p>At home while on the road. </p>
@@ -24,16 +24,16 @@
                     <div class="item">
                         <article>
                             <div class="image">
-                                <img src="assets/images/apartment-1.jpg" alt="" />
+                                <img src="{{ asset('assets/client/images/apartment-1.jpg') }}" alt="" />
                             </div>
                             <div class="details">
                                 <div class="text">
-                                    <h2 class="title"><a href="room-overview.html">Presidential Suite</a></h2>
+                                    <h2 class="title"><a href="room-overview">Presidential Suite</a></h2>
                                     <p>Family room</p>
                                 </div>
                                 <div class="book">
                                     <div>
-                                        <a href="room-overview.html" class="btn btn-main">Book now</a>
+                                        <a href="room-overview" class="btn btn-main">Book now</a>
                                     </div>
                                     <div>
                                         <span class="price h2">€ 299,00</span>
@@ -51,16 +51,16 @@
                     <div class="item">
                         <article>
                             <div class="image">
-                                <img src="assets/images/apartment-2.jpg" alt="" />
+                                <img src="{{ asset('assets/client/images/apartment-2.jpg') }}" alt="" />
                             </div>
                             <div class="details">
                                 <div class="text">
-                                    <h2 class="title"><a href="room-overview.html">Luxury appartment</a></h2>
+                                    <h2 class="title"><a href="room-overview">Luxury appartment</a></h2>
                                     <p>Family room</p>
                                 </div>
                                 <div class="book">
                                     <div>
-                                        <a href="room-overview.html" class="btn btn-main">Book now</a>
+                                        <a href="room-overview" class="btn btn-main">Book now</a>
                                     </div>
                                     <div>
                                         <span class="price h2">€ 199,00</span>
@@ -78,16 +78,16 @@
                     <div class="item">
                         <article>
                             <div class="image">
-                                <img src="assets/images/room-1.jpg" alt="" />
+                                <img src="{{ asset('assets/client/images/room-1.jpg') }}" alt="" />
                             </div>
                             <div class="details">
                                 <div class="text">
-                                    <h2 class="title"><a href="room-overview.html">Club Room</a></h2>
+                                    <h2 class="title"><a href="room-overview">Club Room</a></h2>
                                     <p>Single room</p>
                                 </div>
                                 <div class="book">
                                     <div>
-                                        <a href="room-overview.html" class="btn btn-main">Book now</a>
+                                        <a href="room-overview" class="btn btn-main">Book now</a>
                                     </div>
                                     <div>
                                         <span class="price h2">€ 98,00</span>
@@ -105,16 +105,16 @@
                     <div class="item">
                         <article>
                             <div class="image">
-                                <img src="assets/images/room-2.jpg" alt="" />
+                                <img src="{{ asset('assets/client/images/room-2.jpg') }}" alt="" />
                             </div>
                             <div class="details">
                                 <div class="text">
-                                    <h2 class="title"><a href="room-overview.html">Classic Room</a></h2>
+                                    <h2 class="title"><a href="room-overview">Classic Room</a></h2>
                                     <p>Double room</p>
                                 </div>
                                 <div class="book">
                                     <div>
-                                        <a href="room-overview.html" class="btn btn-main">Book now</a>
+                                        <a href="room-overview" class="btn btn-main">Book now</a>
                                     </div>
                                     <div>
                                         <span class="price h2">€ 129,00</span>
@@ -132,16 +132,16 @@
                     <div class="item">
                         <article>
                             <div class="image">
-                                <img src="assets/images/room-3.jpg" alt="" />
+                                <img src="{{ asset('assets/client/images/room-3.jpg') }}" alt="" />
                             </div>
                             <div class="details">
                                 <div class="text">
-                                    <h2 class="title"><a href="room-overview.html">Superior Room</a></h2>
+                                    <h2 class="title"><a href="room-overview">Superior Room</a></h2>
                                     <p>Queen size bed</p>
                                 </div>
                                 <div class="book">
                                     <div>
-                                        <a href="room-overview.html" class="btn btn-main">Book now</a>
+                                        <a href="room-overview" class="btn btn-main">Book now</a>
                                     </div>
                                     <div>
                                         <span class="price h2">€ 159,00</span>
@@ -167,7 +167,7 @@
 
     <div class="section-header">
         <div class="container">
-            <h2 class="title">Resort facilities <a href="facility.html" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
+            <h2 class="title">Resort facilities <a href="facility" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
             <p>
                 With the best luxury spa, salon and fitness experiences
             </p>
@@ -180,7 +180,7 @@
 
         <!-- === stretcher item === -->
 
-        <li class="stretcher-item" style="background-image:url(assets/images/services-1.jpg);">
+        <li class="stretcher-item" style="background-image:url({{ asset('assets/client/images/services-1.jpg') }});">
             <!--logo-item-->
             <div class="stretcher-logo">
                 <div class="text">
@@ -193,12 +193,12 @@
                 <figcaption>Unparalleled devotion to luxury</figcaption>
             </figure>
             <!--anchor-->
-            <a href="facility.html">Anchor link</a>
+            <a href="facility">Anchor link</a>
         </li>
 
         <!-- === stretcher item === -->
 
-        <li class="stretcher-item" style="background-image:url(assets/images/services-2.jpg);">
+        <li class="stretcher-item" style="background-image:url({{ asset('assets/client/images/services-2.jpg') }});">
             <!--logo-item-->
             <div class="stretcher-logo">
                 <div class="text">
@@ -211,12 +211,12 @@
                 <figcaption>Care about results</figcaption>
             </figure>
             <!--anchor-->
-            <a href="facility.html">Anchor link</a>
+            <a href="facility">Anchor link</a>
         </li>
 
         <!-- === stretcher item === -->
 
-        <li class="stretcher-item" style="background-image:url(assets/images/services-3.jpg);">
+        <li class="stretcher-item" style="background-image:url({{ asset('assets/client/images/services-3.jpg') }});">
             <!--logo-item-->
             <div class="stretcher-logo">
                 <div class="text">
@@ -228,12 +228,12 @@
                 <figcaption>Your daily activities</figcaption>
             </figure>
             <!--anchor-->
-            <a href="facility.html">Anchor link</a>
+            <a href="facility">Anchor link</a>
         </li>
 
         <!-- === stretcher item === -->
 
-        <li class="stretcher-item" style="background-image:url(assets/images/services-4.jpg);">
+        <li class="stretcher-item" style="background-image:url({{ asset('assets/client/images/services-4.jpg') }});">
 
 
             <!--logo-item-->
@@ -248,7 +248,7 @@
                 <figcaption>Hair salons and spas</figcaption>
             </figure>
             <!--anchor-->
-            <a href="facility.html">Anchor link</a>
+            <a href="facility">Anchor link</a>
         </li>
 
         <!-- === stretcher item more === -->
@@ -257,7 +257,7 @@
             <div class="more-icon">
                 <span data-title-show="Show more" data-title-hide="+"></span>
             </div>
-            <a href="facility.html">Anchor link</a>
+            <a href="facility">Anchor link</a>
         </li>
 
     </ul>
@@ -283,8 +283,8 @@
 
             <div class="col-xs-12 col-md-8">
                 <figure>
-                    <figcaption style="background-image:url(assets/images/activity-1.jpg)">
-                        <img src="assets/images/activity-1.jpg" alt="" />
+                    <figcaption style="background-image:url({{ asset('assets/client/images/activity-1.jpg') }})">
+                        <img src="{{ asset('assets/client/images/activity-1.jpg') }}" alt="" />
                     </figcaption>
                     <a href="#" class="btn btn-clean" onclick="">Museums</a>
                 </figure>
@@ -294,8 +294,8 @@
 
             <div class="col-xs-6 col-md-4">
                 <figure>
-                    <figcaption style="background-image:url(assets/images/activity-2.jpg)">
-                        <img src="assets/images/activity-2.jpg" alt="" />
+                    <figcaption style="background-image:url({{ asset('assets/client/images/activity-2.jpg') }})">
+                        <img src="{{ asset('assets/client/images/activity-2.jpg') }}" alt="" />
                     </figcaption>
                     <a href="#" class="btn btn-clean">Nightlife</a>
                 </figure>
@@ -305,8 +305,8 @@
 
             <div class="col-xs-6 col-md-4">
                 <figure>
-                    <figcaption style="background-image:url(assets/images/activity-3.jpg)">
-                        <img src="assets/images/activity-3.jpg" alt="" />
+                    <figcaption style="background-image:url({{ asset('assets/client/images/activity-3.jpg') }})">
+                        <img src="{{ asset('assets/client/images/activity-3.jpg') }}" alt="" />
                     </figcaption>
                     <a href="#" class="btn btn-clean">Food & drink</a>
                 </figure>
@@ -316,8 +316,8 @@
 
             <div class="col-xs-6 col-md-4">
                 <figure>
-                    <figcaption style="background-image:url(assets/images/activity-4.jpg)">
-                        <img src="assets/images/activity-4.jpg" alt="" />
+                    <figcaption style="background-image:url({{ asset('assets/client/images/activity-4.jpg') }})">
+                        <img src="{{ asset('assets/client/images/activity-4.jpg') }}" alt="" />
                     </figcaption>
                     <a href="#" class="btn btn-clean">Shopping</a>
                 </figure>
@@ -327,8 +327,8 @@
 
             <div class="col-xs-6 col-md-4">
                 <figure>
-                    <figcaption style="background-image:url(assets/images/activity-5.jpg)">
-                        <img src="assets/images/activity-5.jpg" alt="" />
+                    <figcaption style="background-image:url({{ asset('assets/client/images/activity-5.jpg') }})">
+                        <img src="{{ asset('assets/client/images/activity-5.jpg') }}" alt="" />
                     </figcaption>
                     <a href="#" class="btn btn-clean">The City</a>
                 </figure>
