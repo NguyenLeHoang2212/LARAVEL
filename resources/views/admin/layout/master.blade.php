@@ -16,7 +16,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <script src="https://cdn.ckeditor.com/ckeditor5/39.0.2/classic/ckeditor.js"></script>
-
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"  >
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -69,7 +69,7 @@
 <script src="{{ asset('assets/admin/plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
 <!-- ChartJS -->
 <script src="{{ asset('assets/admin/plugins/chart.js/Chart.min.js')}}"></script>
-
+<script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <!-- PAGE SCRIPTS -->
 <script src="{{ asset('assets/admin/dist/js/pages/dashboard2.js') }}"></script>
 @yield('js-custom')

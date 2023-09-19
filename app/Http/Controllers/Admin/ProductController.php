@@ -21,7 +21,8 @@ class ProductController extends Controller
     public function index()
     {
 
-        $products = DB::table('products')->select('products.*','product_categories.name as product_category_name')->leftjoin('product_categories','products.product_category_id','=','product_categories.id')->orderBy('created_at', 'DESC')->paginate(2);
+        $products = DB::table('products')->select('products.*','product_categories.name as product_category_name')->leftjoin('product_categories','products.product_category_id','=','product_categories.id')->orderBy('created_at', 'DESC')
+        ->paginate(config('my-config.item-per-pages'));
         return view('admin.pages.product.list',['products' => $products ]);
     }
 
