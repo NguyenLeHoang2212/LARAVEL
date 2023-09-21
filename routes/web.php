@@ -72,15 +72,16 @@ Route::prefix('admin')->name('admin.')->middleware('auth.admin')->group(function
     Route::get('product_categories',[ProductCategoryController::class,'index'])->name('product_category.list');
     Route::get('product_categories/add',[ProductCategoryController::class,'add'])->name('product_category.add');;
     Route::post('product_categories/store', [ProductCategoryController::class, 'store'])->name('product_category.store');
-    Route::get('product_categories/{id}',[ProductCategoryController::class,'detail'])->name('product_category.detail');;
-    Route::post('product_categories/update/{id}',[ProductCategoryController::class,'update'])->name('product_category.update');;
-    Route::get('product_categories/destroy/{id}',[ProductCategoryController::class,'destroy'])->name('product_category.destroy');;
+    Route::get('product_categories/{product_category}',[ProductCategoryController::class,'detail'])->name('product_category.detail');;
+    Route::post('product_categories/update/{product_category}',[ProductCategoryController::class,'update'])->name('product_category.update');;
+    Route::get('product_categories/destroy/{product_category}',[ProductCategoryController::class,'destroy'])->name('product_category.destroy');;
 
 
     //Product
 
     Route::resource('product',ProductController::class);
     Route::post('product/create/slug',[ProductController::class,'createSlug'])->name('product.create.slug');
+    Route::get('product/{product}/restore',[ProductController::class,'restore'])->name('product.restore');
     Route::post('product/ckediter-upload-image',[ProductController::class,'uploadImage'])->name('product.ckedit.upload.image');
 });
 

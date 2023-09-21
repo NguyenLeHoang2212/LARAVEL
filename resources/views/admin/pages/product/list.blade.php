@@ -57,7 +57,7 @@
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $product->name }}</td>
                                             <td>{{ $product->price  }}</td>
-                                            <td>{{ $product->product_category_name  }}</td>
+                                            <td>{{ $product->product_category->name  }}</td>
                                             <td>{!! $product->information !!}</td>
                                             <td>
                                                 @php
@@ -74,7 +74,13 @@
 
 
                                             </td>
-                                            <td><a href="{{ route('admin.product.show',['product' => $product->id]) }}" class="btn btn-primary">Edit</a></td>
+                                            <td><a href="{{ route('admin.product.show',['product' => $product->id]) }}" class="btn btn-primary">Edit</a>
+
+                                                @if(!is_null($product->deleted_at))
+                                                <a href="{{ route('admin.product.restore',['product' => $product->id]) }}" class="btn btn-primary">restore</a>
+
+                                                @endif
+                                            </td>
                                         </tr>
                                         @empty
                                         <td colspan="5">No Data</td>

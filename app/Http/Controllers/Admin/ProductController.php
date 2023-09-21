@@ -12,6 +12,7 @@ use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -21,8 +22,10 @@ class ProductController extends Controller
     public function index()
     {
 
-        $products = DB::table('products')->select('products.*','product_categories.name as product_category_name')->leftjoin('product_categories','products.product_category_id','=','product_categories.id')->orderBy('created_at', 'DESC')
-        ->paginate(config('my-config.item-per-pages'));
+        // $products = DB::table('products')->select('products.*','product_categories.name as product_category_name')->leftjoin('product_categories','products.product_category_id','=','product_categories.id')->orderBy('created_at', 'DESC')
+        // ->paginate(config('my-config.item-per-pages'));
+        //eloquon
+        $products = Product::withTrashed()->paginate(3);
         return view('admin.pages.product.list',['products' => $products ]);
     }
 
@@ -128,15 +131,21 @@ class ProductController extends Controller
 
     public function destroy(string $id)
     {
+        // $result = DB::table('products')->where('id',$id)->delete();
         $product = DB::table('products')->find($id);
         $image = $product->image;
         if(!is_null($image) && file_exists('images/'.$image)){
             unlink('images/'.$image);
         }
 
-        $result = DB::table('products')->where('id','=',$id)->delete();
-        $message = $result ? 'xoa thanh cong' : 'xoa that bai' ;
-        return redirect()->route('admin.product.index')->with('message',$message);
+        //QueryBuidlder
+        // $result = DB::table('products')->delete($id);
+        //ELoquent
+        $productData = Product::find((int)$id);
+        $productData->delete();
+
+        //session flash
+        return redirect()->route('admin.product.index')->with('message','xoa san pham thanh cong');
     }
 
     public function createSlug(Request $request){
@@ -157,5 +166,12 @@ class ProductController extends Controller
             $url = asset('images/'.$fileName);
             return response()->json(['fileName' => $fileName , 'url' => $url , 'uploaded' => 1]);
         }
+    }
+
+    public function restore(string $id){
+        $product = Product::withTrashed()->find($id);
+        $product ->restore();
+        return redirect()->route('admin.product.index',['product' => $product])->with('message','xoa san pham thanh cong');
+
     }
 }
