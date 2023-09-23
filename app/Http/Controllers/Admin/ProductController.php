@@ -171,7 +171,7 @@ class ProductController extends Controller
     public function restore(string $id){
         $product = Product::withTrashed()->find($id);
         $product ->restore();
-        return redirect()->route('admin.product.index',['product' => $product])->with('message','xoa san pham thanh cong');
+        return redirect()->route('admin.product.index',['product' => $product])->with('message','restore san pham thanh cong');
 
     }
 }

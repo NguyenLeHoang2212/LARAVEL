@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\ProductCategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Client\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -84,7 +85,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth.admin')->group(function
     Route::get('product/{product}/restore',[ProductController::class,'restore'])->name('product.restore');
     Route::post('product/ckediter-upload-image',[ProductController::class,'uploadImage'])->name('product.ckedit.upload.image');
 });
-
+Route::get('product-list', [HomeController::class, 'index'])->name('home.index');
 Route::get('7up',function(){
     return '7up';
 });
